@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Plot some KML on a Map</title>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+<style>
+    html, body, #map { box-sizing: border-box; margin: 0; padding: 0; width: 100%; height: 100%; }
+   .leaflet-container .leaflet-control-attribution { font-size: 13px; }
+    iframe { vertical-align: top; }
+    #filter {
+        position: absolute; top: 0; right: 0; z-index: 100;
+        margin: 0; padding: 0 5px;
+        font: 13px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.7);
+        -moz-box-shadow: 0 0 7px #ccc; -webkit-box-shadow: 0 0 7px #ccc; box-shadow: 0 0 7px #ccc;
+    }
+</style>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="KML.js"></script>
+<script src="/js/ready.min.js"></script>
+<script src="js.js"></script>
+
+</head>
+<body>
+
+<div id="map"></div>
+<form id="filter">
+    KML file: <input type="text" name="q" id="q" size=60>
+</form>
+<script>
+    kml.init();
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+</body>
+</html>
+
